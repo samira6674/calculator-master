@@ -1,0 +1,464 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  background-color: #e6e6e6;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  grid-template-rows: 30px 15vh 15vh 6vh 1fr;
+  grid-template-columns: 1fr 300px;
+  grid-template-areas:
+    "header header"
+    "title history"
+    "show-number history"
+    "memory-sign history"
+    "numbers history";
+}
+.history {
+  display: block;
+  position: relative;
+  padding: 10px;
+  grid-area: history;
+  background-color: #e6e6e6;
+}
+
+.history span {
+  font-weight: bold;
+
+  margin-right: 15px;
+}
+.history-value,
+.memory-value {
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+.border-bottom {
+  border-bottom: 3px solid rgb(127, 181, 218);
+}
+
+.histo3 {
+  padding-top: 50px;
+  margin-top: 50px;
+}
+.header {
+  width: 100%;
+  display: flex;
+  position: relative;
+  grid-area: header;
+}
+
+.computer-icon {
+  right: 0px;
+  position: absolute;
+  /* padding: 2px; */
+  background-color: #e6e6e6;
+}
+.mini-bar {
+  /* padding: 5px;  */
+  background-color: #e6e6e6;
+  height: 30px;
+  width: 50px;
+}
+.mini-bar:hover {
+  background-color: #cfcfcf;
+}
+
+.win-bar {
+  /* padding: 5px;  */
+  background-color: #e6e6e6;
+  height: 30px;
+  width: 50px;
+}
+.win-bar:hover {
+  background-color: #cfcfcf;
+}
+
+.close-bar {
+  /* padding: 5px; */
+  background-color: #e6e6e6;
+  height: 30px;
+  width: 60px;
+}
+.close-bar:hover {
+  background-color: #ff0000;
+}
+.title {
+  width: 100%;
+  display: flex;
+  position: relative;
+  padding: 10px;
+  grid-area: title;
+}
+.keep-icon {
+  padding: 10px;
+  height: 30px;
+  background-color: #e6e6e6;
+}
+.keep-icon:hover {
+  background-color: #cfcfcf;
+}
+.open-nav {
+  margin: 4px 5px 0px 0px;
+  background-color: #e6e6e6;
+  padding: 10px;
+  height: 30px;
+}
+.open-nav:hover {
+  background-color: #cfcfcf;
+}
+.standard {
+  margin: 3px 5px 0px 0px;
+  padding-top: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+.memory-sign {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  grid-area: memory-sign;
+}
+.memory-sign button {
+  background-color: #e6e6e6;
+  display: flex;
+  width: 90px;
+  cursor: context-menu;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.history-icon {
+  display: none;
+  position: absolute;
+  right: 0px;
+  padding: 9px;
+  background-color: #e6e6e6;
+  top: 4px;
+}
+.history-icon:hover {
+  background-color: #cfcfcf;
+}
+.show-number {
+  grid-area: show-number;
+  position: relative;
+}
+.zero {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 40px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+.header-title {
+  margin: 6px 0px 8px 9px;
+  font-weight: thin;
+}
+.numbers {
+  grid-area: numbers;
+  height: 100%;
+  width: 100%;
+  padding-top: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  grid-template-rows: repeat(6, minmax(40px, 1fr));
+  grid-template-areas:
+    "percent num18 num17 num12"
+    "ce c ex num10"
+    "num7 num8 num9 zarb"
+    "num4 num5 num6 num16"
+    "num1 num2 num3 num15"
+    "num13 num0 num14 mos";
+  grid-gap: 2px 2px;
+  font-size: 25px;
+}
+.percent {
+  grid-area: percent;
+}
+.ce {
+  grid-area: ce;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.c {
+  grid-area: c;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.ex {
+  grid-area: ex;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.num0 {
+  grid-area: num0;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+}
+.num1 {
+  grid-area: num1;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+}
+.num2 {
+  grid-area: num2;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+}
+
+.num3 {
+  grid-area: num3;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+}
+.num4 {
+  grid-area: num4;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+}
+.num5 {
+  grid-area: num5;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+}
+.num6 {
+  grid-area: num6;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+}
+.num7 {
+  grid-area: num7;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+}
+.num8 {
+  grid-area: num8;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+}
+.num9 {
+  grid-area: num9;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+}
+.num10 {
+  grid-area: num10;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.num11 {
+  grid-area: num11;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.num12 {
+  grid-area: num12;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.num13 {
+  grid-area: num13;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.num14 {
+  grid-area: num14;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.zarb {
+  grid-area: zarb;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.mos {
+  grid-area: mos;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.num15 {
+  grid-area: num15;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.num16 {
+  grid-area: num16;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.num17 {
+  grid-area: num17;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.num18 {
+  grid-area: num18;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.num19 {
+  grid-area: num19;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.numbers button:hover {
+  background-color: #cfcfcf;
+}
+.mm:hover {
+  background-color: #cfcfcf;
+}
+.m-:hover {
+  background-color: #cfcfcf;
+}
+.ms:hover {
+  background-color: #cfcfcf;
+}
+.radical img {
+  height: 20px;
+}
+.num {
+  font-size: 20px;
+}
+.mos {
+  background-color: #75b2e4;
+}
+.mos:hover {
+  background-color: #0078d7 !important ;
+}
+.m3 {
+  display: none;
+}
+
+.his-memmory {
+  display: flex;
+
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 500px) {
+  .container {
+    grid-template-columns: 100%;
+    grid-template-rows: 30px 15vh 15vh 6vh 1fr;
+    grid-template-areas:
+      "header"
+      "title"
+      "show-number"
+      "memory-sign"
+      "numbers";
+  }
+  .history-icon {
+    display: block;
+  }
+  .m3 {
+    display: block;
+    margin-top: 13px;
+  }
+
+  .history {
+    display: none;
+  }
+  .num19 {
+    display: none;
+  }
+}
+@media screen and (min-width: 501px) {
+  .num19 {
+    display: none;
+  }
+  .history-icon {
+    display: none;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 740px) {
+  .histo3 {
+    font-size: 13px;
+  }
+  .container {
+    grid-template-columns: 65vw 35vw;
+  }
+  .num19 {
+    display: none;
+  }
+}
+@media screen and (min-width: 741px) and (max-device-width: 1023px) {
+  .container {
+    grid-template-columns: 1fr 250px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .numbers {
+    grid-template-columns: repeat(5, 2fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+      "percent ce c ex num10"
+      "num18 num7 num8 num9 zarb"
+      "num17 num4 num5 num6 num16"
+      "num19 num1 num2 num3 num15"
+      "num12 num13 num0 num14 mos";
+  }
+  .num19 {
+    display: block;
+  }
+}
+
+.up-display {
+  position: absolute;
+  right: 8px;
+  bottom: 109px;
+  color: #70757a;
+  font-size: 13px;
+}
+
+.click {
+  pointer-events: none;
+}
+
+.history-memory {
+  display: block;
+}
+
+.memory-calculator {
+  display: none;
+}
+
+li {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 5px;
+}
+
+.trash-bin {
+  font-size: 20px;
+  background: none;
+  position: fixed;
+  bottom: 10px;
+  right: 5px;
+  cursor: pointer;
+}
