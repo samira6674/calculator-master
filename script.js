@@ -59,7 +59,7 @@ function operator(operation) {
     show.innerHTML = `sqr(${display.innerHTML}) `;
   } else if (operation === "numberPow3") {
     result = parseFloat(Math.pow(display.innerHTML, 3));
-    show.innerHTML = `sqr(${display.innerHTML}) `;
+    show.innerHTML = `cube(${display.innerHTML}) `;
   } else if (operation === "radical") {
     result = parseFloat(Math.sqrt(display.innerHTML));
     show.innerHTML = `√(${display.innerHTML})`;
@@ -94,9 +94,8 @@ function secondOperand() {
       break;
     }
   }
-  let item = `${numbers.num1} ${operand} ${numbers.num2}=<br> ${secondResult}`;
+  let item = `${numbers.num1} ${operand} ${numbers.num2}=<br> ${secondResult} `;
   historyData.push(item);
-  //chera numbers.num1=secondResult?
   updateHistory();
   numbers.num1 = secondResult;
   numbers.num2 = "";

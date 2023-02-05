@@ -136,7 +136,7 @@ body {
   background-color: #e6e6e6;
   display: flex;
   width: 90px;
-  cursor: context-menu;
+  cursor: pointer;
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -335,6 +335,10 @@ body {
 .m-:hover {
   background-color: #cfcfcf;
 }
+
+.m+:hover {
+  background-color: #cfcfcf;
+}
 .ms:hover {
   background-color: #cfcfcf;
 }
@@ -359,6 +363,8 @@ body {
 
   margin-bottom: 30px;
 }
+
+
 @media screen and (max-width: 500px) {
   .container {
     grid-template-columns: 100%;
@@ -429,7 +435,7 @@ body {
 .up-display {
   position: absolute;
   right: 8px;
-  bottom: 109px;
+  top: -20px;
   color: #70757a;
   font-size: 13px;
 }
@@ -452,6 +458,9 @@ li {
   justify-content: flex-end;
   align-items: center;
   margin: 5px;
+  text-align: right;
+  line-height: 1.5rem;
+  padding-bottom: 10px;
 }
 
 .trash-bin {
